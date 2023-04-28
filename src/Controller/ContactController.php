@@ -23,8 +23,8 @@ class ContactController extends AbstractController
  
  
            $email_form=$data['votre_email'];
-           $message_form=$data['votre_message'];
- 
+           $message_form=$data['message'];
+          // $description_form =$data['description'];
            $mailService->sendMail(
            $email_form,  $message_form);
                  

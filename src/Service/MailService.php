@@ -22,6 +22,7 @@ class MailService
         $email = (new Email())
         ->from($email)
         ->to($email)
+        
     //->cc('cc@example.com')
         //->bcc('bcc@example.com')
         //->replyTo('fabien@example.com')
