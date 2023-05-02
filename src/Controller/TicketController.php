@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 use App\Form\TicketType;
-use App\Service\MailService;
+
+
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TicketController extends AbstractController
 {
     #[Route('/ticket', name: 'app_ticket')]
-    public function index(MailService $mailService, Request $request): Response
+    public function index(MailerInterface $mailer, Request $request): Response
     {
         $form = $this->createForm(TicketType::class);						
         $form->handleRequest($request);
@@ -20,19 +23,42 @@ class TicketController extends AbstractController
  
           $data = $form->getData();
  
+           $nom=$data['Nom'];
+           $email_expediteur=$data['Email'];
+           $telephone=$data['Telephone'];
+           $service=$data['Projet_pour_service'];
+           $description=$data['Description'];
+           $message=$data['Message'];
+          
  
-           $email_form=$data['votre_email'];
-           $message_form=$data['votre_message'];
- 
-           $mailService->sendMail(
-           $email_form,  $message_form);
-                 
-        return $this->renderForm('ticket/traitement.html.twig', 
-     [
-             ]);
-          }
-            return $this->renderForm('ticket/index.html.twig', [
-        	'form'=> $form,
-         ]);
-       }
+           $email = (new TemplatedEmail())
+           ->from($email_expediteur)
+           ->to('h.kharit@adei-france.fr')
+           //->cc('cc@example.com')
+           //->bcc('bcc@example.com')
+           //->replyTo('fabien@example.com')
+           //->priority(Email::PRIORITY_HIGH)
+           ->subject('email')
+           ->text('Sending emails is fun again!')
+           ->htmlTemplate('ticket/email.html.twig')
+           ->context([
+               'Email' => $email_expediteur,
+                'Nom' => $nom,
+               'Telephone' => $telephone,
+               'Message' => $message,
+               'Description' => $description,
+               'Projet_pour_service' => $service
+
+           ]);
+   
+       $mailer->send($email);
+   
+   
+           }
+   
+           return $this->render('ticket/index.html.twig', [
+               'form' => $form->createView(),
+           ]);
+      
+   }
 }
