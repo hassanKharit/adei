@@ -4,7 +4,11 @@
 
 {% block body %}
 {% block carrousel %}{% endblock %}
-<h1>Ticket</h1>
+{% for nos_service in nos_services %}
+
+<h1>Ticket {{ nos_service.titre }} </h1>
+
+{% endfor %}
 {{ form(form) }}
 
 {% endblock %}

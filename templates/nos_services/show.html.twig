@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NosServices{% endblock %}
+
+{% block body %}
+    <h1>NosServices</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ nos_service.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ nos_service.titre }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ nos_service.description }}</td>
+            </tr>
+            <tr>
+                <th>Imagename</th>
+                <td>{{ nos_service.imagename }}</td>
+            </tr>
+            <tr>
+                <th>Lien</th>
+                <td>{{ nos_service.lien }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_nos_services_index') }}">back to list</a>
+
+    <a href="{{ path('app_nos_services_edit', {'id': nos_service.id}) }}">edit</a>
+
+    {{ include('nos_services/_delete_form.html.twig') }}
+{% endblock %}

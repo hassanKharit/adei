@@ -18,7 +18,7 @@ class TemplateMailService {
 
 
    
-    private $mailerInterface;
+    private $mailer;
 
     public function __construct(MailerInterface $mailerInterface)
     {

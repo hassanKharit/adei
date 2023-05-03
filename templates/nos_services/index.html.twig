@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NosServices index{% endblock %}
+
+{% block body %}
+    <h1>NosServices index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Imagename</th>
+                <th>Lien</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nos_service in nos_services %}
+            <tr>
+                <td>{{ nos_service.id }}</td>
+                <td>{{ nos_service.titre }}</td>
+                <td>{{ nos_service.description }}</td>
+                <td>{{ nos_service.imagename }}</td>
+                <td>{{ nos_service.lien }}</td>
+                <td>
+                    <a href="{{ path('app_nos_services_show', {'id': nos_service.id}) }}">show</a>
+                    <a href="{{ path('app_nos_services_edit', {'id': nos_service.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_nos_services_new') }}">Create new</a>
+{% endblock %}
