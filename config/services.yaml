@@ -22,3 +22,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    
+# MERCURE_PUBLIC_URL=https://example.com/.well-known/mercure
+    mercure_hub_url: 'http://127.0.0.1:3000/.well-known/mercure'
+    mercure_jwt_secret: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOlsiKiJdfX0.iHLdpAEjX4BqCsHJEegxRmO-Y6sMxXwNATrQyRNt3GY'
