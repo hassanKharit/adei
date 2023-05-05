@@ -2,19 +2,19 @@
 
 namespace App\Controller;
 
-use App\Entity\Services;
+use App\Entity\NosServices;
 use App\Form\ServicesType;
-use App\Repository\ServicesRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\NosServicesRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/admin/services')]
 class AdminServicesController extends AbstractController
 {
     #[Route('/', name: 'app_admin_services_index', methods: ['GET'])]
-    public function index(ServicesRepository $servicesRepository): Response
+    public function index(NosServicesRepository $servicesRepository): Response
     {
         return $this->render('admin_services/index.html.twig', [
             'services' => $servicesRepository->findAll(),
@@ -22,9 +22,9 @@ class AdminServicesController extends AbstractController
     }
 
     #[Route('/edit', name: 'app_admin_services_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, ServicesRepository $servicesRepository): Response
+    public function new(NosServices $service, Request $request, NosServicesRepository $servicesRepository): Response
     {
-        $service = new Services();
+        $service = new NosServices();
         $form = $this->createForm(ServicesType::class, $service);
         $form->handleRequest($request);
 
@@ -41,7 +41,7 @@ class AdminServicesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_admin_services_show', methods: ['GET'])]
-    public function show(Services $service): Response
+    public function show(NosServices $service): Response
     {
         return $this->render('admin_services/show.html.twig', [
             'service' => $service,
@@ -49,7 +49,7 @@ class AdminServicesController extends AbstractController
     }
 
     #[Route('/edit/{id}', name: 'app_admin_services_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Services $service, ServicesRepository $servicesRepository): Response
+    public function edit(Request $request, NosServices $service, NosServicesRepository $servicesRepository): Response
     {
         $form = $this->createForm(ServicesType::class, $service);
         $form->handleRequest($request);
@@ -67,7 +67,7 @@ class AdminServicesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_admin_services_delete', methods: ['POST'])]
-    public function delete(Request $request, Services $service, ServicesRepository $servicesRepository): Response
+    public function delete(Request $request, NosServices $service, NosServicesRepository $servicesRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$service->getId(), $request->request->get('_token'))) {
             $servicesRepository->remove($service, true);
