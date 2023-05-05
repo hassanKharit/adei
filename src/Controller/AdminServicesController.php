@@ -21,7 +21,7 @@ class AdminServicesController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_admin_services_new', methods: ['GET', 'POST'])]
+    #[Route('/edit', name: 'app_admin_services_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ServicesRepository $servicesRepository): Response
     {
         $service = new Services();
@@ -48,7 +48,7 @@ class AdminServicesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'app_admin_services_edit', methods: ['GET', 'POST'])]
+    #[Route('/edit/{id}', name: 'app_admin_services_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Services $service, ServicesRepository $servicesRepository): Response
     {
         $form = $this->createForm(ServicesType::class, $service);
