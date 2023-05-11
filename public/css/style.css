@@ -1,4 +1,19 @@
 
+/*************************************
+pour que le footer reste toujours en bas
+****************************************/
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;  /* ou display: flex;
+                                          flex-direction: column;   + #contenu{   flex-grow: 1; }     */
+}
+html, body {
+  height: 100%;
+}
+
+/******************************************
+taille logo à travailler
+*******************************************/
 header img{
   width: 200px;
 }
