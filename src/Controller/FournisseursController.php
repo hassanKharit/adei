@@ -14,5 +14,9 @@ class FournisseursController extends AbstractController
         return $this->render('fournisseurs/index.html.twig', [
             'controller_name' => 'FournisseursController',
         ]);
+
+        return $this->render('formations/index.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 }

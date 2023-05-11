@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commentaire index{% endblock %}
+
+{% block body %}
+
+<h1>Témoignages</h1>
+<h2>Les témoignages de nos clients satisfaits</h2>
+<img src="" alt="">
+<p>Chez ADEI, nous sommes fiers de fournir des services de qualité et de travailler avec des clients satisfaits. Nous sommes ravis de partager avec vous les témoignages de certains de nos clients qui ont été pleinement satisfaits de notre travail.
+
+Ci-dessous, vous trouverez une sélection de témoignages réels de nos clients qui ont utilisé nos services de dépannage informatique, de formation, de création de sites web, de récupération de données, d'installation de caméra IP et de vente de matériel informatique. Ces témoignages reflètent notre engagement envers la satisfaction de nos clients et notre capacité à fournir des services de qualité.
+
+Nous sommes également heureux de vous donner la possibilité de laisser un commentaire sur votre expérience avec nous. Votre avis est important pour nous et nous permettra d'améliorer continuellement nos services.
+
+Nous espérons que ces témoignages vous donneront une idée de la qualité de nos services et de notre engagement envers la satisfaction de nos clients. Nous sommes impatients de travailler avec vous et de vous offrir la meilleure expérience possible.</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Utilisateur</th>
+                <th>Titre</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for commentaire in commentaires %}
+            <tr>
+                <td>{{commentaire.users.email}}
+                <td>{{ commentaire.titre }}</td>
+                <td>{{ commentaire.message }}</td>
+                <td>
+                    <a href="{{ path('app_commentaire_show', {'id': commentaire.id}) }}">show</a>
+                    <a href="{{ path('app_commentaire_edit', {'id': commentaire.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_commentaire_new') }}">Create new</a>
+{% endblock %}
