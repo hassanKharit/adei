@@ -4,7 +4,9 @@
 
 {% block body %}
 {% block carrousel %}{% endblock %}
+<div class="container">
 <h1>Dépannage informatique</h1>
+
 <h2> Besoin d'une assistance rapide et fiable pour votre ordinateur ?</h2>
 <img src="" alt="">
 <p>Votre ordinateur ne démarre plus ? Vous rencontrez des problèmes de connexion Internet ? Des virus ont infecté votre système ? Chez ADEI, nous sommes là pour vous aider.
@@ -17,5 +19,10 @@ Enfin, nous proposons également la vente de matériel informatique et nous somm
 
 N'hésitez pas à faire appel à nous pour tous vos besoins en dépannage informatique, nous sommes là pour vous aider à résoudre tous vos problèmes informatiques.</p>
 
-    {{ form(form) }}
+    
+    <!-- centrer bloc et travail sur ça taille width. "style sera dans le fichier css -->
+    <div class="mx-auto p-1" style="width: 70%;">    
+                {{ form(form) }}
+    </div>
+</div>               
 {% endblock %}
