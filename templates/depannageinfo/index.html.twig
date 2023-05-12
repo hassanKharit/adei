@@ -7,22 +7,50 @@
 <div class="container">
 <h1>Dépannage informatique</h1>
 
-<h2> Besoin d'une assistance rapide et fiable pour votre ordinateur ?</h2>
-<img src="" alt="">
-<p>Votre ordinateur ne démarre plus ? Vous rencontrez des problèmes de connexion Internet ? Des virus ont infecté votre système ? Chez ADEI, nous sommes là pour vous aider.
+   
+        <h2> Besoin d'une assistance rapide et fiable pour votre ordinateur ?</h2>
+        <img src="" alt=""> 
+        <!-- <div class="container text-center"> -->
+<div class="row">
+        <div class="col-sm-4">
+                <p>Votre ordinateur ne démarre plus ? Vous rencontrez des problèmes de connexion Internet ? Des virus ont infecté votre système ? Chez ADEI, nous sommes là pour vous aider.
 
-Notre équipe de professionnels de l'informatique intervient rapidement pour diagnostiquer et résoudre tous vos problèmes informatiques. Que ce soit pour réparer un écran noir, installer un réseau Wi-Fi, supprimer des virus ou récupérer des données perdues, nous avons les compétences nécessaires pour résoudre tous vos problèmes.
-
-Nous proposons également des formations sur mesure pour vous aider à maîtriser votre ordinateur et ses fonctionnalités. Que vous soyez débutant ou utilisateur avancé, nous pouvons adapter notre programme de formation à vos besoins spécifiques.
-
-Enfin, nous proposons également la vente de matériel informatique et nous sommes spécialisés dans le recyclage de matériel pour protéger l'environnement.
-
-N'hésitez pas à faire appel à nous pour tous vos besoins en dépannage informatique, nous sommes là pour vous aider à résoudre tous vos problèmes informatiques.</p>
-
+                    Notre équipe de professionnels de l'informatique intervient rapidement pour diagnostiquer et résoudre tous vos problèmes informatiques. Que ce soit pour réparer un écran noir, installer un réseau Wi-Fi, supprimer des virus ou récupérer des données perdues, nous avons les compétences nécessaires pour résoudre tous vos problèmes.
+            
+                    Nous proposons également des formations sur mesure pour vous aider à maîtriser votre ordinateur et ses fonctionnalités. Que vous soyez débutant ou utilisateur avancé, nous pouvons adapter notre programme de formation à vos besoins spécifiques.
+            
+                    Enfin, nous proposons également la vente de matériel informatique et nous sommes spécialisés dans le recyclage de matériel pour protéger l'environnement.
+            
+                    N'hésitez pas à faire appel à nous pour tous vos besoins en dépannage informatique, nous sommes là pour vous aider à résoudre tous vos problèmes informatiques.</p> 
+              </div>
+ <!-- <div class="mx-auto p-1" style="width: 20%;">  -->
     
-    <!-- centrer bloc et travail sur ça taille width. "style sera dans le fichier css -->
-    <div class="mx-auto p-1" style="width: 100%;">    
-                {{ form(form) }}
-    </div>
+        <div class="col-8">
+            <div class="row g-5">
+                <div class="col-3">{{ form_widget(form.Nom) }}</div>
+                <div class="col-3">{{ form_widget(form.Email) }}</div>
+                <div class="col-3">{{ form_widget(form.Societe) }} </div>
+                <div class="col-3">{{ form_widget(form.Telephone) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse_intervention) }} </div>
+                <div class="col-4">{{ form_widget(form.Projet_pour_service) }} </div>
+                <div class="col-4">{{ form_widget(form.Description) }} </div>
+                <div class="col-4">{{ form_widget(form.Message) }} </div>
+                <div class="col-auto">{{ form_widget(form.files) }} </div>
+                <div class="col-auto">{{ form_widget(form.envoyer) }} </div>
+            </div>
+        </div>
+</div>
+        <!-- </div>    -->
+
+            
+            <!-- centrer bloc et travail sur ça taille width. "style sera dans le fichier css -->
+            
+
+           
+                        
+           
+            
+    
 </div>               
 {% endblock %}
