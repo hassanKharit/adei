@@ -55,8 +55,7 @@ class TicketType extends AbstractType
             'Assistance à distance' =>'Service 7',
             'Vente de matériel' =>'Service 8',
             'Installation de caméra IP' =>'Service 9',
-            'class'=> 'form-control form-control-lg',
-            'class'=> 'form-control form-control-lg'
+            
             ],
         ]) 
         ->add('Description', TextareaType::class, [
@@ -66,7 +65,9 @@ class TicketType extends AbstractType
         ->add('Message', TextareaType::class, [
             'attr' => [
                 'placeholder' => 'message',
-                'class'=> 'form-control-lg']])              //griser le champ de droite à revoir
+                'class'=> 'form-control-lg',
+                'maxlength' => '8'
+                ]])              //griser le champ de droite à revoir
         ->add('files', FileType::class, [
             'attr' => [
                 'placeholder' => 'photo',

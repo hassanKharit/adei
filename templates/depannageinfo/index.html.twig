@@ -3,6 +3,7 @@
 {% block title %}Depannage informatique{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
 <div class="container">
 <h1>Dépannage informatique</h1>
@@ -25,7 +26,7 @@
               </div>
  <!-- <div class="mx-auto p-1" style="width: 20%;">  -->
     
-        <div class="col-8">
+        <div class="col-8 ps-5">
             <div class="row g-5">
                 <div class="col-3">{{ form_widget(form.Nom) }}</div>
                 <div class="col-3">{{ form_widget(form.Email) }}</div>
@@ -33,10 +34,10 @@
                 <div class="col-3">{{ form_widget(form.Telephone) }} </div>
                 <div class="col-6">{{ form_widget(form.Adresse) }} </div>
                 <div class="col-6">{{ form_widget(form.Adresse_intervention) }} </div>
-                <div class="col-4">{{ form_widget(form.Projet_pour_service) }} </div>
-                <div class="col-4">{{ form_widget(form.Description) }} </div>
-                <div class="col-4">{{ form_widget(form.Message) }} </div>
-                <div class="col-auto">{{ form_widget(form.files) }} </div>
+                <div class="col-6">{{ form_widget(form.Projet_pour_service) }} </div>
+                <div class="col-6">{{ form_widget(form.files) }} </div>
+                <div class="col-6">{{ form_widget(form.Description) }} </div>
+                <div class="col-6">{{ form_widget(form.Message) }} </div>
                 <div class="col-auto">{{ form_widget(form.envoyer) }} </div>
             </div>
         </div>

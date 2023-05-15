@@ -11,11 +11,15 @@ html, body {
   height: 100%;
 }
 
+header{
+  margin-bottom: 30px;
+}
+
 /******************************************
 taille logo à travailler
 *******************************************/
-header img{
-  width: 200px;
+.navbar img{
+  width: 220px;
 }
 
 
@@ -54,6 +58,6 @@ img{
     margin: auto;
 }
 
-carousel-item img{
-  max-width: 100%;
+*{
+  text-align: justify;
 }

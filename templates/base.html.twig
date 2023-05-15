@@ -30,11 +30,11 @@
 
       <!-- logo à rajouter -->
 
-      <h1> <img src="{{asset('/img/logo.png')}}" alt=""> Assistance Dépannage Electro Informatique</h1>
+      {# <h1> <img src="{{asset('/img/logo.png')}}" alt=""> Assistance Dépannage Electro Informatique</h1> #}
 
-      <nav class="navbar navbar-expand-lg bg-success">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white ms-5" href="{{path('app_accueil')}}">ACCUEIL</a>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">                                       {# Accueil #}
+          <a class="navbar-brand ms-5" href="{{path('app_accueil')}}"><img src="{{asset('/img/logo.png')}}" alt="logo"></a>
           <!--j'ai rajouté un peu de margin left(ms) pour décaler ACCUEIL-->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -44,10 +44,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{path('app_presentation')}}">PRESENTATION</a>
+                <a class="nav-link" href="{{path('app_presentation')}}">PRESENTATION</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   SERVICES
                 </a>
@@ -66,23 +66,23 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="{{path('app_contact')}}">CONTACT</a>
+              <li class="nav-item">                                      {#  <a class="nav-link text-white" href="{{path('app_contact')}}">CONTACT</a> #}
+                <a class="nav-link" href="{{path('app_contact')}}">CONTACT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{path('app_entreprises')}}">ENTREPRISES</a>
+                <a class="nav-link " href="{{path('app_entreprises')}}">ENTREPRISES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{path('app_particuliers')}}">PARTICULIERS</a>
+                <a class="nav-link" href="{{path('app_particuliers')}}">PARTICULIERS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{path('app_tutos')}}">TUTOS</a>
+                <a class="nav-link" href="{{path('app_tutos')}}">TUTOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{path('app_temoignages')}}">TEMOIGNAGES</a>
+                <a class="nav-link" href="{{path('app_temoignages')}}">TEMOIGNAGES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{ path('app_login') }}">login <i class="fa-solid fa-user"></i></a>
+                <a class="nav-link" href="{{ path('app_login') }}">login <i class="fa-solid fa-user"></i></a>
               </li>
               <li class="nav-item">
                 {% if is_granted('ROLE_ADMIN') %}
@@ -100,12 +100,12 @@
       </nav>
     </header>
 
-<div id="contenu">
+
     <!-- rajout d'un block avec un paragraphe pour petite info au autres (sinon à effacer si inutile) -->
     <div class="container">
-      {% block paragrapheMytho %}
+      {% block paragraphe %}
 
-      <h1 class="mt-5">Solutions informatiques écologiques et durables pour votre entreprise</h1>
+      <h1 class="mt-2">Solutions informatiques écologiques et durables pour votre entreprise</h1>
       <!--  mt-5 = margin_top de 5 en boostrap -->
       <p>
         Nous proposons une large gamme de services informatiques respectueux de l'environnement pour répondre à tous vos
@@ -131,7 +131,7 @@
             <div class="card mb-3">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="{{asset('/img/broken1920.jpg')}}" class="img-fluid rounded-start " alt="...">
+                  <img src="{{asset('/img/hardware.jpg')}}" class="img-fluid rounded-start " alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -152,7 +152,7 @@
             <div class="card mb-3">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="{{asset('/img/pcrepar1920.jpg')}}" class="img-fluid rounded-start" alt="...">
+                  <img src="{{asset('/img/broken.jpg')}}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -171,7 +171,7 @@
             <div class="card mb-3">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="{{asset('/img/hardware1920.jpg')}}" class="img-fluid rounded-start" alt="...">
+                  <img src="{{asset('/img/atelier.jpg')}}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -198,11 +198,12 @@
         </button>
       </div>
       <!-- Carousel wrapper -->
+    </div>
       {% endblock %}
 
       {% block body %} {% endblock %}
-    </div>
-</div>
+    
+
     <div class="container">
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
