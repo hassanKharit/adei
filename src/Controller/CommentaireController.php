@@ -28,7 +28,6 @@ class CommentaireController extends AbstractController
         $commentaire = new Commentaire();
 
         if($user){
-            
           $commentaire->setUsers($user);
         }
 
