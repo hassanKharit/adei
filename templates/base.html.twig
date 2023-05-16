@@ -28,21 +28,17 @@
 
     <header>
 
-      <!-- logo à rajouter -->
+      <!-- logo à rajouter "">ACCUEIL ms-5-->
 
-      {# <h1> <img src="{{asset('/img/logo.png')}}" alt=""> Assistance Dépannage Electro Informatique</h1> #}
+      <h1><img src="{{asset('/img/logo.png')}}" alt=""> Assistance Dépannage Electro Informatique</h1>
 
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">                                       {# Accueil #}
-          <a class="navbar-brand ms-5" href="{{path('app_accueil')}}"><img src="{{asset('/img/logo.png')}}" alt="logo"></a>
-          <!--j'ai rajouté un peu de margin left(ms) pour décaler ACCUEIL-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <div class="container-fluid">                                       
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="{{path('app_accueil')}}">ACCUEIL</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{path('app_presentation')}}">PRESENTATION</a>
               </li>
@@ -102,8 +98,8 @@
 
 
     <!-- rajout d'un block avec un paragraphe pour petite info au autres (sinon à effacer si inutile) -->
-    <div class="container">
-      {% block paragraphe %}
+    {# <div class="container"> #}
+      {# {% block paragraphe %}
 
       <h1 class="mt-2">Solutions informatiques écologiques et durables pour votre entreprise</h1>
       <!--  mt-5 = margin_top de 5 en boostrap -->
@@ -111,7 +107,7 @@
         Nous proposons une large gamme de services informatiques respectueux de l'environnement pour répondre à tous vos
         besoins. Faites confiance à notre expertise et à notre engagement pour des solutions informatiques durables et
         responsables.</p>
-      {% endblock %}
+      {% endblock %} #}
 
       {% block carrousel %}
       <!-- Carousel wrapper -->
@@ -133,9 +129,9 @@
                 <div class="col-md-4">
                   <img src="{{asset('/img/hardware.jpg')}}" class="img-fluid rounded-start " alt="...">
                 </div>
-                <div class="col-md-8">
+                <div class="color col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">Actions écologiques</h5>
+                    <h2 class="card-title">Actions écologiques</h2>
                     <p class="card-text">Agissons ensemble pour préserver notre planète et lutter contre le changement
                       climatique.</p>
                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
@@ -143,8 +139,6 @@
                 </div>
               </div>
             </div>
-            <h5></h5>
-            <p></p>
           </div>
 
           <!-- Single item -->
@@ -154,9 +148,9 @@
                 <div class="col-md-4">
                   <img src="{{asset('/img/broken.jpg')}}" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8">
+                <div class="color col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">Engagement écologique</h5>
+                    <h2 class="card-title">Engagement écologique</h2>
                     <p class="card-text">Nous nous engageons à adopter des pratiques respectueuses de l'environnement
                       dans toutes nos activités.</p>
                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
@@ -173,9 +167,9 @@
                 <div class="col-md-4">
                   <img src="{{asset('/img/atelier.jpg')}}" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8">
+                <div class="color col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">Réparation écologique</h5>
+                    <h2 class="card-title">Réparation écologique</h2>
                     <p class="card-text">>Des solutions durables pour réparer et protéger l'environnement.</p>
                   </div>
                 </div>
@@ -199,6 +193,16 @@
       </div>
       <!-- Carousel wrapper -->
     </div>
+      {% endblock %}
+    {# <div class="container"> #}
+        {% block paragraphe %}
+
+      <h3 class="mt-2 text-center">Solutions informatiques écologiques et durables pour votre entreprise</h3>
+      <!--  mt-5 = margin_top de 5 en boostrap -->
+      <p class="text-center">
+        Nous proposons une large gamme de services informatiques respectueux de l'environnement pour répondre à tous vos
+        besoins. Faites confiance à notre expertise et à notre engagement pour des solutions informatiques durables et
+        responsables.</p>
       {% endblock %}
 
       {% block body %} {% endblock %}

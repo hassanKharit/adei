@@ -1,3 +1,13 @@
+:root{
+  --main-color:#83db53;
+  --sec-color: #1c5368;
+}
+
+*{
+  text-align: justify;
+}
+
+
 
 /*************************************
 pour que le footer reste toujours en bas
@@ -10,17 +20,40 @@ body{
 html, body {
   height: 100%;
 }
-
+/******************************************************************************
+header titre
+*********************************************************/
 header{
   margin-bottom: 30px;
 }
 
+header h1 img{
+  width: 10%;
+}
+
+header h1{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/***********************************************************
+navbar
+************************************************************/
+
+.navbar{
+  /* background-color: #83db53; */
+  /* background: linear-gradient(120deg, #83db53 100%, #1c5368 0%); */
+}
+
+.navbar a img {
+  width: 15%;
+}
+
+
 /******************************************
 taille logo à travailler
 *******************************************/
-.navbar img{
-  width: 220px;
-}
+
 
 
 
@@ -53,11 +86,28 @@ img{
         CARROUSEL 2 => plus petit, centré avec image claire
 *******************************************/
 #carouselDarkVariant{
-
-    width: 90%;
+  
+   
     margin: auto;
 }
 
-*{
-  text-align: justify;
+.carousel-inner .color{
+  background: linear-gradient(180deg,var(--main-color)  50%, var(--sec-color) 50%);
+
+}
+
+/************************************************
+                card
+************************************************/
+.anim{
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0);
+	}
 }
