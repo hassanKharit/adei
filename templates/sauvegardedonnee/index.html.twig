@@ -3,11 +3,42 @@
 {% block title %}Sauvegarde en ligne{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
+<div class="container">
 <h1>Sauvegarde en ligne</h1>
 <h2>titre H2</h2>
 <img src="" alt="">
 <p>Sauvegarde en ligne pour les entreprises et les particuliers : protégez vos données efficacement et en toute sécurité. Découvrez comment fonctionnent les solutions de sauvegarde en ligne, leurs caractéristiques et fonctionnalités, ainsi que les éléments à prendre en compte pour calculer votre budget dédié à la sauvegarde. Ne laissez plus rien au hasard et assurez la protection de vos données importantes.</p>
 
-{{form(form)}}
+ <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: 26rem;">
+                <img src="{{asset('/img/broken.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Sauvegarde en ligne pour les entreprises et les particuliers : protégez vos données efficacement et en toute sécurité. Découvrez comment fonctionnent les solutions de sauvegarde en ligne, leurs caractéristiques et fonctionnalités, ainsi que les éléments à prendre en compte pour calculer votre budget dédié à la sauvegarde. Ne laissez plus rien au hasard et assurez la protection de vos données importantes.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="mx-auto p-1" style="width: 20%;">  -->
+
+        <div class="col-8 ps-5">
+            <div class="row g-5">
+                <div class="col-3">{{ form_widget(form.Nom) }}</div>
+                <div class="col-3">{{ form_widget(form.Email) }}</div>
+                <div class="col-3">{{ form_widget(form.Societe) }} </div>
+                <div class="col-3">{{ form_widget(form.Telephone) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse_intervention) }} </div>
+                <div class="col-6">{{ form_widget(form.Projet_pour_service) }} </div>
+                <div class="col-6">{{ form_widget(form.files) }} </div>
+                <div class="col-6">{{ form_widget(form.Description) }} </div>
+                <div class="col-6">{{ form_widget(form.Message) }} </div>
+                <div class="col-auto">{{ form_widget(form.envoyer) }} </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

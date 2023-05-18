@@ -3,13 +3,54 @@
 {% block title %}Formations{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
-<h1>Formations</h1>
-<h2>Améliorez vos compétences en informatique</h2>
-<img src="" alt="">
-<p>Vous cherchez à améliorer vos compétences informatiques pour votre travail ou pour votre vie personnelle ? Notre entreprise ADEI vous propose des formations informatiques personnalisées adaptées à vos besoins et à votre niveau. Que vous soyez débutant ou utilisateur expérimenté, nous pouvons vous aider à maîtriser les outils informatiques tels que les logiciels de traitement de texte, les tableurs, la retouche photo, la gestion de fichiers, l'utilisation d'internet, la sécurité informatique, etc.
 
-Nos formateurs expérimentés peuvent dispenser des cours en individuel ou en groupe selon vos préférences. Nous prenons en compte vos besoins spécifiques et établissons un programme de formation personnalisé pour vous permettre de progresser rapidement. Avec notre aide, l'informatique ne sera plus une source de stress, mais un outil à votre service. N'hésitez pas à nous contacter pour en savoir plus sur nos formations informatiques.</p>
+<div class="container">
+    <h1>Formations</h1>
+    <h2>Améliorez vos compétences en informatique</h2>
 
-{{form (form)}}
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: 26rem;">
+                <img src="{{asset('/img/broken.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Vous cherchez à améliorer vos compétences informatiques pour votre travail ou
+                        pour votre vie personnelle ? Notre entreprise ADEI vous propose des formations informatiques
+                        personnalisées adaptées à vos besoins et à votre niveau. Que vous soyez débutant ou utilisateur
+                        expérimenté, nous pouvons vous aider à maîtriser les outils informatiques tels que les logiciels
+                        de traitement de texte, les tableurs, la retouche photo, la gestion de fichiers, l'utilisation
+                        d'internet, la sécurité informatique, etc.
+
+                        Nos formateurs expérimentés peuvent dispenser des cours en individuel ou en groupe selon vos
+                        préférences. Nous prenons en compte vos besoins spécifiques et établissons un programme de
+                        formation personnalisé pour vous permettre de progresser rapidement. Avec notre aide,
+                        l'informatique ne sera plus une source de stress, mais un outil à votre service. N'hésitez pas à
+                        nous contacter pour en savoir plus sur nos formations informatiques.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="mx-auto p-1" style="width: 20%;">  -->
+
+        <div class="col-8 ps-5">
+            <div class="row g-5">
+                <div class="col-3">{{ form_widget(form.Nom) }}</div>
+                <div class="col-3">{{ form_widget(form.Email) }}</div>
+                <div class="col-3">{{ form_widget(form.Societe) }} </div>
+                <div class="col-3">{{ form_widget(form.Telephone) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse_intervention) }} </div>
+                <div class="col-6">{{ form_widget(form.Projet_pour_service) }} </div>
+                <div class="col-6">{{ form_widget(form.files) }} </div>
+                <div class="col-6">{{ form_widget(form.Description) }} </div>
+                <div class="col-6">{{ form_widget(form.Message) }} </div>
+                <div class="col-auto">{{ form_widget(form.envoyer) }} </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

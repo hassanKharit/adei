@@ -3,18 +3,52 @@
 {% block title %}Assistance a distance{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
-<h1>Assistance à distance</h1>
-<h2>Une assistance rapide et pratique où que vous soyez</h2>
-<img src="" alt="">
-<p>L'assistance à distance est un service pratique et efficace pour résoudre rapidement les problèmes informatiques. 
-Grâce à la technologie, il est désormais possible d'obtenir de l'aide en temps réel, où que vous soyez dans le monde. 
-Ce service est particulièrement utile pour les petites entreprises et les particuliers qui n'ont pas toujours 
-les ressources pour engager un technicien sur place. En outre, l'assistance à distance permet de gagner du temps et de
- réduire les coûts, car le technicien n'a pas besoin de se déplacer. Les outils utilisés pour l'assistance à distance 
- incluent les logiciels de contrôle à distance, les chats en direct et les appels vidéo. Avec un bon support technique 
- à distance, les problèmes informatiques peuvent être 
-résolus rapidement et efficacement, ce qui permet de réduire les temps d'arrêt et d'améliorer la productivité.</p>
+<div class="container">
+    <h1>Assistance à distance</h1>
+    <h2>Une assistance rapide et pratique où que vous soyez</h2>
+    <img src="" alt="">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: 26rem;">
+                <img src="{{asset('/img/broken.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p>L'assistance à distance est un service pratique et efficace pour résoudre rapidement les
+                        problèmes informatiques.
+                        Grâce à la technologie, il est désormais possible d'obtenir de l'aide en temps réel, où que vous
+                        soyez dans le monde.
+                        Ce service est particulièrement utile pour les petites entreprises et les particuliers qui n'ont
+                        pas toujours
+                        les ressources pour engager un technicien sur place. En outre, l'assistance à distance permet de
+                        gagner du temps et de
+                        réduire les coûts, car le technicien n'a pas besoin de se déplacer. Les outils utilisés pour
+                        l'assistance à distance
+                        incluent les logiciels de contrôle à distance, les chats en direct et les appels vidéo. Avec un
+                        bon support technique
+                        à distance, les problèmes informatiques peuvent être
+                        résolus rapidement et efficacement, ce qui permet de réduire les temps d'arrêt et d'améliorer la
+                        productivité.</p>
+                    </p>
+                </div>
+            </div>
 
-{{form(form)}}
-{% endblock %}
+        </div>
+
+        <div class="col-8 ps-5">
+            <div class="row g-5">
+                <div class="col-3">{{ form_widget(form.Nom) }}</div>
+                <div class="col-3">{{ form_widget(form.Email) }}</div>
+                <div class="col-3">{{ form_widget(form.Societe) }} </div>
+                <div class="col-3">{{ form_widget(form.Telephone) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse) }} </div>
+                <div class="col-6">{{ form_widget(form.Adresse_intervention) }} </div>
+                <div class="col-6">{{ form_widget(form.Projet_pour_service) }} </div>
+                <div class="col-6">{{ form_widget(form.files) }} </div>
+                <div class="col-6">{{ form_widget(form.Description) }} </div>
+                <div class="col-6">{{ form_widget(form.Message) }} </div>
+                <div class="col-auto">{{ form_widget(form.envoyer) }} </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
