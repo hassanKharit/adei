@@ -8,6 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -24,7 +25,7 @@ class TicketType extends AbstractType
                 'placeholder' => 'nom*',                     
               'class'=> 'form-control-sm']
             ])
-        ->add('Email', TextType::class, [
+        ->add('Email', EmailType::class, [
             'attr' => [
                 'placeholder' => 'email',
                 'class'=> 'form-control-sm']] )

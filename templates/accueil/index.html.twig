@@ -5,6 +5,7 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+    {# col-md-6 m-xxl-1 col-12 #}
     {% endblock %}
 
 
@@ -14,10 +15,10 @@
 
 
 
-<div class="container-fluid  ">
-<div class="row d-flex flex-row justify-content-center">
+<div class="container-fluid">
+<div class="row">
 
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12 ">                                                  <!--  animation css -->
+  <div class="anim col-md-3  ">                                                  <!--  animation css -->
       <a href="{{ path('app_depannageinfo') }}" class="card border border-black" style="width: 15rem; margin-top: 30px;">
         <img src="{{ asset('/img/electronics1920.jpg') }}" class="card-img-top" alt="Fissure in Sandstone"/>
         <div class="card-body">
@@ -27,7 +28,7 @@
       </a>
   </div>
 
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_reseauxsecurite')}}" class="card border border-black" style="width: 15rem; margin-top: 30px">
       <img src="{{asset('/img/dossier/Réseaux_sécurité/network-gb93ef859c_1920.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -37,7 +38,7 @@
     </a>
   </div>
   
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_formations')}}" class="card " style="width: 15rem; margin-top: 30px;">
       <img src="{{asset('/img/classroom-g7b066d523_1920.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -46,7 +47,7 @@
       </div>
     </a>
   </div>
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_creationsite')}}" class="card border border-black" style="width: 15rem; margin-top: 30px;">   <!--  bordure image -->
       <img src="{{asset('/img/creation_site.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -56,7 +57,7 @@
     </a>
   </div>
 
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_recuperationdonnee')}}" class="card border border-black" style="width: 15rem; margin-top: 30px;">  <!--  bordure image -->
       <img src="{{asset('/img/recuperation_donnees.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -66,7 +67,7 @@
     </a>
   </div>
 
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_assistancedistance')}}" class="card border border-black" style="width: 15rem; margin-top: 30px;">
       <img src="{{asset('/img/assistance.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -75,7 +76,7 @@
       </div>
     </a>
   </div>
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_vente')}}" class="card border border-black" style="width: 15rem; margin-top: 30px;">
       <img src="{{asset('/img/vente.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -84,7 +85,7 @@
       </div>
     </a>
   </div>
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_installation')}}" class="card border border-black " style="width: 15rem; margin-top: 30px;">
       <img src="{{asset('/img/camera.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -93,7 +94,7 @@
       </div>
     </a>
   </div>
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_sauvegardedonnee')}}" class="card border border-black" style="width: 15rem; margin-top: 30px;">
       <img src="{{asset('/img/sauvegarde.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
@@ -102,7 +103,7 @@
       </div>
     </a>
   </div>
-  <div class="anim col-xxl-2 col-md-6 m-xxl-1 col-12">
+  <div class="anim col-md-3 ">
     <a href="{{path('app_recyclage')}}" class="card border border-black" style="width: 15rem; margin-top: 30px;">
       <img src="{{asset('/img/recyclage.jpg')}}" class="card-img-top" alt="Fissure in Sandstone"/>
       <div class="card-body">
