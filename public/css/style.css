@@ -24,7 +24,7 @@ html, body {
 header titre
 *********************************************************/
 header{
-  margin:5px;
+  margin-bottom: 30px;
 }
 
 header h1 img{
@@ -92,20 +92,17 @@ img{
 
 .carousel-inner .color{
   /* background: linear-gradient(140deg,var(--main-color)  50%, var(--sec-color) 50%); */
-  background: linear-gradient(140deg,var(--main-color)  50%, var(--main-color) 50%,rgb(67, 174, 212) );
+  background: linear-gradient(140deg,var(--main-color)  50%, var(--main-color) 50%,var(--sec-color) );
   display: flex;
- 
+  color: white;
   
 }
 
 .card-body{
   align-self: center;
 text-align: center;
-color: var(--sec-color);
-text-shadow: 2px 2px 5px #ffffff;
+
 }
-
-
 
 
 
@@ -117,3 +114,11 @@ text-shadow: 2px 2px 5px #ffffff;
 footer a:hover{
   background-color: #83db53;
 }
+
+
+/* @media screen and (max-width: 1400px) {
+  .query{
+      margin: auto;
+      width: 100%;
+  }
+  } */
