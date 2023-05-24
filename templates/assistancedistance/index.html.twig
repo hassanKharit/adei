@@ -5,16 +5,17 @@
 {% block body %}
 {% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
+
 <div class="container">
     <h1>Assistance à distance</h1>
     <h2>Une assistance rapide et pratique où que vous soyez</h2>
-    <img src="" alt="">
     <div class="row">
-        <div class="col-sm-4">
-            <div class="card" style="width: 26rem;">
-                <img src="{{asset('/img/broken.jpg')}}" class="card-img-top" alt="...">
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <img src="{{ asset('/img/broken.jpg') }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p>L'assistance à distance est un service pratique et efficace pour résoudre rapidement les
+                    <p class="card-text">L'assistance à distance est un service pratique et efficace pour résoudre
+                        rapidement les
                         problèmes informatiques.
                         Grâce à la technologie, il est désormais possible d'obtenir de l'aide en temps réel, où que vous
                         soyez dans le monde.
@@ -28,27 +29,53 @@
                         bon support technique
                         à distance, les problèmes informatiques peuvent être
                         résolus rapidement et efficacement, ce qui permet de réduire les temps d'arrêt et d'améliorer la
-                        productivité.</p>
+                        productivité.
                     </p>
                 </div>
             </div>
-
         </div>
 
-        <div class="col-8 ps-5">
-            <div class="row g-5">
-                <div class="col-3">{{ form_widget(form.Nom) }}</div>
-                <div class="col-3">{{ form_widget(form.Email) }}</div>
-                <div class="col-3">{{ form_widget(form.Societe) }} </div>
-                <div class="col-3">{{ form_widget(form.Telephone) }} </div>
-                <div class="col-6">{{ form_widget(form.Adresse) }} </div>
-                <div class="col-6">{{ form_widget(form.Adresse_intervention) }} </div>
-                <div class="col-6">{{ form_widget(form.Projet_pour_service) }} </div>
-                <div class="col-6">{{ form_widget(form.files) }} </div>
-                <div class="col-6">{{ form_widget(form.Description) }} </div>
-                <div class="col-6">{{ form_widget(form.Message) }} </div>
-                <div class="col-auto">{{ form_widget(form.envoyer) }} </div>
-            </div>
+        <div class="col-lg-8">
+            <form>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Nom) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Email) }}
+                    </div>
+                    <div class="col-6">
+                        {{ form_widget(form.Societe) }}
+                    </div>
+                    <div class="col-6">
+                        {{ form_widget(form.Telephone) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse_intervention) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Projet_pour_service) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.files) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Description) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Message) }}
+                    </div>
+                    <div class="col-auto">
+                        {{ form_widget(form.envoyer) }}
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-    {% endblock %}
+</div>
+
+{% endblock %}
+

@@ -31,10 +31,5 @@ p{
   }
   
 
-  @media screen and (max-width: 1400px) {
-    .query{
-        margin: auto;
-        width: 50%;
-    }
-    }
+
 
