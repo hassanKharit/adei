@@ -1,4 +1,4 @@
-h5{
+h5{                                             /*laisser les h5 des cards ou non, voir SEO*/
     font-size: 90%;
 }
 
@@ -9,7 +9,7 @@ p{
 /************************************************
                 card
 ************************************************/
-.anim:hover{
+.anim:hover{                                              /*au survol de la souris, les éléments ayant la classe anim auront l'animation écrite en-dessous*/
     animation: myAnim 2s ease 0s 1 normal forwards;
   }
   @keyframes myAnim {
@@ -26,7 +26,7 @@ p{
       }
   }
   
-  .anim a:hover{
+  .anim a:hover{                /*au passage de la souris, les liens ayant la classe anim seront noires*/
     color:black;
   }
   
