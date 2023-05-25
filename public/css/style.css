@@ -1,3 +1,29 @@
+
+/*************************************
+pour que le footer reste toujours en bas
+****************************************/
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;  /* ou display: flex;
+                                          flex-direction: column;   + #contenu{   flex-grow: 1; }     */
+}
+html, body {
+  height: 100%;
+}
+
+header{
+  margin-bottom: 30px;
+}
+
+/******************************************
+taille logo à travailler
+*******************************************/
+.navbar img{
+  width: 220px;
+}
+
+
+
 /*****************************
             NAVBAR
 *******************************/
@@ -28,9 +54,15 @@ img{
 *******************************************/
 #carouselDarkVariant{
 
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
+<<<<<<< HEAD
 carousel-item img{
   max-width: 100%;
+=======
+*{
+  text-align: justify;
+}
+>>>>>>> fcffeb0dc8db0e584b34fa561382179dac4fd6d6

@@ -14,6 +14,7 @@ class RechercheController extends AbstractController
     {
         $termeRecherche = $request->query->get('q');
 
+
         return $this->redirectToRoute('app_recherche', ['q' => $termeRecherche]);
         
        
