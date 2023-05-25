@@ -3,19 +3,11 @@
   --sec-color: #1c5368;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-
-} 
 
 
 /******************************************************************************
 header titre
 *********************************************************/
-header{
-  margin-bottom: 30px;
-}
 
 header h1 img{
   width: 10%;
@@ -29,12 +21,14 @@ header h1{
 /***********************************************************
 navbar
 ************************************************************/
+nav{
+  background-color: #f7fbf2;
+}
 
 .navbar a:hover{
   background-color: #83db53;
  
 }
- 
 
 .navbar a img {
   width: 15%;
@@ -49,6 +43,7 @@ navbar
   /* background: linear-gradient(140deg,var(--main-color)  50%, var(--sec-color) 50%); */
   background: linear-gradient(140deg,var(--main-color)  50%, var(--main-color) 50%,var(--sec-color) );
   display: flex;
+  justify-content: center;
   color: white;
   
 }
@@ -60,6 +55,10 @@ color: #ffffff;
 text-shadow: 2px 2px 5px var(--sec-color);
 }
 
+h1{
+  font-size: 200%;
+}
+
 
 /*****************************************************************
                   FOOTER
@@ -67,5 +66,7 @@ text-shadow: 2px 2px 5px var(--sec-color);
 footer a:hover{
   background-color: #83db53;
 }
+
+
 
 

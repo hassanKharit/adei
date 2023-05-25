@@ -28,7 +28,7 @@
 <html>
 <body>
 
-    <header>
+    <header class="header mb-2">
 
      
 
@@ -37,7 +37,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">                                       
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="{{path('app_accueil')}}">ACCUEIL</a>
               </li>
@@ -99,17 +99,7 @@
     </header>
 
 
-    <!-- rajout d'un block avec un paragraphe pour petite info au autres (sinon à effacer si inutile) -->
-    
-      {# {% block paragraphe %}
-
-      <h1 class="mt-2">Solutions informatiques écologiques et durables pour votre entreprise</h1>
-      <!--  mt-5 = margin_top de 5 en boostrap -->
-      <p>
-        Nous proposons une large gamme de services informatiques respectueux de l'environnement pour répondre à tous vos
-        besoins. Faites confiance à notre expertise et à notre engagement pour des solutions informatiques durables et
-        responsables.</p>
-      {% endblock %} #}
+   
    
           {% block carrousel %}
           <!-- Carousel wrapper -->
@@ -132,11 +122,10 @@
                       <img src="{{asset('/img/hardware.jpg')}}" class="img-fluid rounded-start " alt="...">
                     </div>
                     <div class="color col-md-8">
-                      <div class="card-body">
+                      <div class="card-body-carousel">
                         <h2 class="card-title-carousel">Actions écologiques</h2>
                         <p class="card-text">Agissons ensemble pour préserver notre planète et lutter contre le changement
                           climatique.</p>
-                        <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                       </div>
                     </div>
                   </div>
@@ -151,7 +140,7 @@
                       <img src="{{asset('/img/broken.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="color col-md-8">
-                      <div class="card-body">
+                      <div class="card-body-carousel">
                         <h2 class="card-title-carousel">Engagement écologique</h2>
                         <p class="card-text">Nous nous engageons à adopter des pratiques respectueuses de l'environnement
                           dans toutes nos activités.</p>
@@ -170,9 +159,9 @@
                       <img src="{{asset('/img/atelier.jpg')}}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="color col-md-8">
-                      <div class="card-body">
+                      <div class="card-body-carousel">
                         <h2 class="card-title-carousel">Réparation écologique</h2>
-                        <p class="card-text">>Des solutions durables pour réparer et protéger l'environnement.</p>
+                        <p class="card-text">Des solutions durables pour réparer et protéger l'environnement.</p>
                       </div>
                     </div>
                   </div>
