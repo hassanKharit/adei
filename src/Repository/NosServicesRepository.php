@@ -39,6 +39,14 @@ class NosServicesRepository extends ServiceEntityRepository
         }
     }
 
+    public function ordre(){
+        $service = $this->getEntityManager()
+        ->createQuery("SELECT s FROM App\Entity\NosServices s ORDER BY s.titre  DESC")
+        ->getResult();
+
+        return $service;
+    }
+
 //    /**
 //     * @return NosServices[] Returns an array of NosServices objects
 //     */
