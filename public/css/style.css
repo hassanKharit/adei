@@ -10,13 +10,15 @@ header titre
 *********************************************************/
 
 header img{              /*pour viser essentiellement le logo(img) qui dans le header */
-  width: 10%;               /*taille du logo*/
+  width: 12%;               /*taille du logo*/
 }
 
 header h1{                /*pour viser essentiellement le h1 du header*/
     text-align: center;                 
     margin-top: 1rem;
+    
 }
+
 
 /***********************************************************
 navbar
@@ -57,6 +59,7 @@ text-shadow: 2px 2px 5px var(--sec-color);
 
 h1{
   font-size: 200%;         /*taille des titres en h1 du site  à revoir*/ 
+  
 }
 
 
@@ -66,7 +69,6 @@ h1{
 footer a:hover{
   background-color: var(--main-color);            /* "a:hover" pour mettre une couleur de fond sur les liens du footer au passage de la souris*/
 }
-
 
 
 

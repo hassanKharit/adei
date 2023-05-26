@@ -2,7 +2,7 @@ h5{                                             /*laisser les h5 des cards ou no
     font-size: 90%;
 }
 
-p{
+.card-text{
     font-size: 80%;
 }
 
