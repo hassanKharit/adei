@@ -1,121 +1,131 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}Hello AccueilController!{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+{% endblock %}
 
 
 
 {% block body %}
 
 
-
-<div class="container-fluid  ">
-<div class="row d-flex flex-row justify-content-center">
-
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-6 ">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
-      <div class="card-body">
-        <h5 class="card-title">Dépannage informatique</h5>
-        <p class="card-text">Un problème avec votre ordinateur ? Nous sommes là pour vous aider à résoudre toutes sortes de problèmes informatiques.</p>
-        <a href="{{path('app_depannageinfo')}}" class="btn btn-primary">Button</a>
-      </div>
+<div class="container-fluid mt-5">        {# mt = margin top en bootstrap #}
+  <div class="row">
+    <div class="anim col-xxl-2 col-md-4 col-6">     {# j'ai rajouté une class anim sur toutes les cards pour les viser et les travailler en css #}
+      <a href="{{ path('app_depannageinfo') }}" class="card border border-black mb-3">  {# rajout de la class boostrap border border-black pour mettre des bordures noires aux cards #}
+        <img src="{{ asset('/img/electronics1920.jpg') }}" class="card-img-top" alt="Image dépannage informatique" />
+        <div class="card-body">
+          <h5 class="card-title">Dépannage informatique</h5>
+          <p class="card-text">Un problème avec votre ordinateur ? Nous sommes là pour vous aider à résoudre toutes
+            sortes de problèmes informatiques.</p>
+        </div>
+      </a>
     </div>
-  </div>
-
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-6">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+     <a href="{{path('app_reseauxsecurite')}}"  class="card border border-black mb-3">
+      <img src="{{asset('/img/dossier/Réseaux_sécurité/network-gb93ef859c_1920.jpg')}}" class="card-img-top" alt="Image réseaux informatiques"/>
       <div class="card-body">
         <h5 class="card-title">Réseaux et sécurité</h5>
-        <p class="card-text">Vous cherchez à sécuriser votre réseau informatique ? Nous vous proposons des solutions adaptées à vos besoins pour protéger vos données.</p>
-        <a href="{{path('app_reseauxsecurite')}}" class="btn btn-primary">Button</a>
+        <p class="card-text">Vous cherchez à sécuriser votre réseau informatique ? Nous vous proposons des solutions adaptées pour la protection de vos données.</p>
       </div>
+    </a>
     </div>
-  </div>
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+       <a href="{{path('app_formations')}}"  class="card border border-black mb-3">
+      <img src="{{asset('/img/classroom-g7b066d523_1920.jpg')}}" class="card-img-top" alt="Image formation"/>
       <div class="card-body">
         <h5 class="card-title">Formations</h5>
-        <p class="card-text">Besoin de vous former aux nouvelles technologies ? Nous proposons des formations sur mesure pour vous aider à maîtriser les outils informatiques.</p>
-        <a href="{{path('app_formations')}}" class="btn btn-primary">Button</a>
+        <p class="card-text">Besoin de vous former aux nouvelles technologies ? Nous proposons des formations sur mesure pour maîtriser les outils informatiques.</p>
       </div>
+    </a>
     </div>
-  </div>
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+      <a href="{{path('app_creationsite')}}" class="card border border-black mb-3">
+      <img src="{{asset('/img/creation_site.jpg')}}" class="card-img-top" alt="Image création de site web"/>
       <div class="card-body">
         <h5 class="card-title">Création de sites web</h5>
-        <p class="card-text">Besoin d'un site web pour votre entreprise ? Nous réalisons des sites sur mesure pour répondre à vos besoins.</p>
-        <a href="{{path('app_creationsite')}}" class="btn btn-primary">Button</a>
+        <p class="card-text">Besoin d'un site web pour votre entreprise ? Nous réalisons des sites sur mesure pour répondre à vos besoins et vous démarquer de la concurrence. </p>
       </div>
+    </a>
     </div>
-  </div>
-
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+      <a href="{{path('app_recuperationdonnee')}}" class="card border border-black mb-3">
+      <img src="{{asset('/img/recuperation_donnees.jpg')}}" class="card-img-top" alt="Image récupération de données"/>
       <div class="card-body">
         <h5 class="card-title">Récupération de données</h5>
-        <p class="card-text">Vous avez perdu des données importantes ? Nous pouvons vous aider à les récupérer grâce à nos outils spécialisés.</p>
-        <a href="{{path('app_sauvegardedonnee')}}" class="btn btn-primary">Button</a>
+        <p class="card-text"> Vous avez perdu des données importantes ? Nous pouvons vous aider à les récupérer efficacement grâce à nos outils spécialisés.</p>
       </div>
+    </a>
     </div>
-  </div>
-
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
-      <div class="card-body">
-        <h5 class="card-title">Assistance à distance</h5>
-        <p class="card-text">Besoin d'une assistance informatique rapide ? Nous proposons des interventions à distance pour résoudre vos problèmes rapidement.</p>
-        <a href="{{path('app_recuperationdonnee')}}" class="btn btn-primary">Button</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+      <a href="{{path('app_vente')}}" class="card border border-black mb-3">
+      <img src="{{asset('/img/vente.jpg')}}" class="card-img-top" alt="Image vente de matériel"/>
       <div class="card-body">
         <h5 class="card-title">Vente de matériel</h5>
         <p class="card-text">Besoin d'un nouvel équipement informatique ? Nous proposons une sélection de matériel de qualité pour répondre à vos besoins.</p>
-        <a href="{{path('app_assistancedistance')}}" class="btn btn-primary">Button</a>
       </div>
+    </a>
     </div>
-  </div>
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+       <a href="{{path('app_installation')}}" class="card border border-black mb-3">
+      <img src="{{asset('/img/camera.jpg')}}" class="card-img-top" alt="Image installation informatique"/>
       <div class="card-body">
         <h5 class="card-title">Installation de caméra IP</h5>
         <p class="card-text">Besoin de surveiller votre entreprise ? Nous installons des caméras IP pour vous permettre de visualiser votre activité à distance.</p>
-        <a href="{{path('app_vente')}}" class="btn btn-primary">Button</a>
       </div>
+    </a>
     </div>
-  </div>
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+      <a href="{{path('app_sauvegardedonnee')}}" class="card border border-black mb-3">
+      <img src="{{asset('/img/sauvegarde.jpg')}}" class="card-img-top" alt="Image sauvegarde de données"/>
       <div class="card-body">
-        <h5 class="card-title">recycler du matériel informatique</h5>
-        <p class="card-text">Vous souhaitez vous débarrasser de votre vieux matériel informatique ? Nous proposons un service de recyclage pour donner une seconde vie à vos équipements.</p>
-        <a href="{{path('app_installation')}}" class="btn btn-primary">Button</a>
+        <h5 class="card-title">sauvegarde en ligne</h5>
+        <p class="card-text">Peur de perdre vos données. Nous assurons une sauvegarde automatique, sécurisée de vos données critiques sur des serveurs distants.</p>
       </div>
+    </a>
     </div>
-  </div>
-  <div class="col-xxl-2 col-md-6 m-xxl-1 col-12">
-    <div class="card" style="width: 18rem; margin-top: 30px;">
-      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+       <a href="{{path('app_recyclage')}}" class="card border border-black mb-3">
+      <img src="{{asset('/img/recyclage.jpg')}}" class="card-img-top" alt="Image recyclage informatique"/>
       <div class="card-body">
-        <h5 class="card-title">recycler du matériel informatique</h5>
-        <p class="card-text"> Nous proposons des solutions durables pour réparer et protéger l'environnement en utilisant des techniques respectueuses de l'environnement.</p>
-        <a href="{{path('app_recyclage')}}" class="btn btn-primary">Button</a>
+        <h5 class="card-title">recyclage informatique</h5>
+        <p class="card-text"> Nous proposons des solutions durables pour réparer et protéger l'environnement en utilisant des techniques respectant l'environnement.</p>
       </div>
+    </a>
+    </div>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+      <a href="{{ path('app_depannageinfo') }}" class="card border border-black mb-3">
+        <img src="{{asset('/img/assistance.jpg')}}" class="card-img-top" alt="Image assistance à distance" />
+        <div class="card-body">
+          <h5 class="card-title">Assistance à distance</h5>
+          <p class="card-text">Besoin d'une assistance informatique rapide ? Nous proposons des interventions à distance pour résoudre vos problèmes rapidement.</p>
+        </div>
+      </a>
+    </div>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+      <a href="{{ path('app_depannageinfo') }}" class="card border border-black mb-3">
+        <img src="{{ asset('/img/electronics1920.jpg') }}" class="card-img-top" alt="Fissure in Sandstone" />
+        <div class="card-body">
+          <h5 class="card-title">Dépannage informatique</h5>
+          <p class="card-text">Un problème avec votre ordinateur ? Nous sommes là pour vous aider à résoudre toutes
+            sortes de problèmes informatiques.</p>
+        </div>
+      </a>
+    </div>
+    <div class="anim col-xxl-2 col-md-4 col-6">
+      <a href="{{ path('app_depannageinfo') }}" class="card border border-black mb-3">
+        <img src="{{ asset('/img/electronics1920.jpg') }}" class="card-img-top" alt="Fissure in Sandstone" />
+        <div class="card-body">
+          <h5 class="card-title">Dépannage informatique</h5>
+          <p class="card-text">Un problème avec votre ordinateur ? Nous sommes là pour vous aider à résoudre toutes
+            sortes de problèmes informatiques.</p>
+        </div>
+      </a>
     </div>
   </div>
-
-</div>
 </div>
 
 
@@ -134,7 +144,3 @@
 
 
 {% endblock %}
-
-
-
-

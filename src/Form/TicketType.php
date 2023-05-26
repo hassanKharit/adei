@@ -8,6 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -19,11 +20,31 @@ class TicketType extends AbstractType
     {
         $builder
         ->add('titre')
-        ->add('Nom', TextType::class)
-        ->add('Email', TextType::class)
-        ->add('Societe', TextType::class)
-        ->add('Telephone', NumberType::class)
-        ->add('Adresse', TextType::class)
+        ->add('Nom', TextType::class, [
+            'attr' => [
+                'placeholder' => 'nom',                     
+              'class'=> 'form-control']
+            ])
+        ->add('Email', EmailType::class, [
+            'attr' => [
+                'placeholder' => 'email',
+                'class'=> 'form-control']] )
+        ->add('Societe', TextType::class, [
+            'attr' => [
+                'placeholder' => 'société',
+                'class'=> 'form-control']])
+        ->add('Telephone', NumberType::class, [
+            'attr' => [
+                'placeholder' => 'téléphone',
+                'class'=> 'form-control']])
+        ->add('Adresse', TextType::class, [
+            'attr' => [
+                'placeholder' => 'adresse',
+                'class'=> 'form-control']])
+        ->add("Adresse_intervention", TextType::class, [
+            'attr' => [
+                'placeholder' => "adresse d'intervention",
+                'class'=> 'form-control']])
         ->add('Projet_pour_service', ChoiceType::class, [
             'choices' => [
             'Dépannage informatique' =>'Service 1',
@@ -35,11 +56,22 @@ class TicketType extends AbstractType
             'Assistance à distance' =>'Service 7',
             'Vente de matériel' =>'Service 8',
             'Installation de caméra IP' =>'Service 9',
+            
             ],
         ]) 
-        ->add('Description', TextareaType::class)
-        ->add('Message', TextareaType::class)
-        ->add('files', FileType::class)
+        ->add('Description', TextareaType::class, [
+            'attr' => [
+                'placeholder' => 'description',
+                'class'=> 'form-control']])              //la class form-control permet d'ajuster des modifications
+        ->add('Message', TextareaType::class, [
+            'attr' => [
+                'placeholder' => 'message',
+                'class'=> 'form-control'
+                ]])              //griser le champ de droite à revoir
+        ->add('files', FileType::class, [
+            'attr' => [
+                'placeholder' => 'photo',
+                'class'=> 'form-control']])                 //modifier la forme à revoir
         ->add('envoyer',SubmitType::class)
         ;
     }

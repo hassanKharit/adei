@@ -3,17 +3,82 @@
 {% block title %}Recyclage du materiel informatique{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
-<h1>Recyclage du matériel informatique</h1>
-<h2>Recycler son matériel informatique pour un avenir durable</h2>
-<img src="" alt="">
-<p>Le recyclage du matériel informatique est une pratique de plus en plus courante pour les entreprises soucieuses de leur impact environnemental. En effet, le traitement des déchets électroniques est une préoccupation majeure dans le contexte actuel de la transition écologique.
 
-Chez [nom de l'entreprise], nous vous proposons un service de récupération et de recyclage de votre matériel informatique. Nous pouvons récupérer vos anciens équipements électroniques, tels que les ordinateurs, les imprimantes, les scanners, les écrans, les claviers et souris, les disques durs, les cartouches d'encre, les batteries, etc.
+<div class="container">
+    <h1>Recycler son matériel informatique pour un avenir durable</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <img src="{{ asset('/img/broken.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text text-justify">Le recyclage du matériel informatique est une pratique de plus en plus courante
+                        pour les entreprises soucieuses de leur impact environnemental. En effet, le traitement des
+                        déchets électroniques est une préoccupation majeure dans le contexte actuel de la transition
+                        écologique.
 
-Notre entreprise collabore avec des partenaires spécialisés dans le traitement et la valorisation des déchets électroniques, conformément aux normes environnementales en vigueur. Nous nous engageons à vous offrir une solution de recyclage respectueuse de l'environnement, en vous assurant que vos déchets électroniques ne finissent pas dans une décharge sauvage ou ne sont pas exportés illégalement vers des pays en développement.
+                        Chez [nom de l'entreprise], nous vous proposons un service de récupération et de recyclage de
+                        votre matériel informatique. Nous pouvons récupérer vos anciens équipements électroniques, tels
+                        que les ordinateurs, les imprimantes, les scanners, les écrans, les claviers et souris, les
+                        disques durs, les cartouches d'encre, les batteries, etc.
 
-De plus, notre service de recyclage peut également vous permettre de bénéficier d'avantages fiscaux ou de réductions sur vos achats de nouveaux équipements. N'hésitez pas à nous contacter pour en savoir plus sur nos offres de recyclage et sur les solutions d'achat de matériel informatique durable. Contribuons ensemble à un avenir plus responsable et plus durable pour la planète !</p>
+                        Notre entreprise collabore avec des partenaires spécialisés dans le traitement et la
+                        valorisation des déchets électroniques, conformément aux normes environnementales en vigueur.
+                        Nous nous engageons à vous offrir une solution de recyclage respectueuse de l'environnement, en
+                        vous assurant que vos déchets électroniques ne finissent pas dans une décharge sauvage ou ne
+                        sont pas exportés illégalement vers des pays en développement.
 
-{{form(form)}}
+                        De plus, notre service de recyclage peut également vous permettre de bénéficier d'avantages
+                        fiscaux ou de réductions sur vos achats de nouveaux équipements. N'hésitez pas à nous contacter
+                        pour en savoir plus sur nos offres de recyclage et sur les solutions d'achat de matériel
+                        informatique durable. Contribuons ensemble à un avenir plus responsable et plus durable pour la
+                        planète !
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <form>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Nom) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Email) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Societe) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Telephone) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse_intervention) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Projet_pour_service) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.files) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Description) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Message) }}
+                    </div>
+                    <div class="col-auto">
+                        {{ form_widget(form.envoyer) }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

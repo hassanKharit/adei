@@ -3,19 +3,80 @@
 {% block title %}Depannage informatique{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
-<h1>Dépannage informatique</h1>
-<h2> Besoin d'une assistance rapide et fiable pour votre ordinateur ?</h2>
-<img src="" alt="">
-<p>Votre ordinateur ne démarre plus ? Vous rencontrez des problèmes de connexion Internet ? Des virus ont infecté votre système ? Chez ADEI, nous sommes là pour vous aider.
 
-Notre équipe de professionnels de l'informatique intervient rapidement pour diagnostiquer et résoudre tous vos problèmes informatiques. Que ce soit pour réparer un écran noir, installer un réseau Wi-Fi, supprimer des virus ou récupérer des données perdues, nous avons les compétences nécessaires pour résoudre tous vos problèmes.
+<div class="container">
+    <h1>Besoin d'une assistance rapide et fiable pour votre ordinateur ?</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <img src="{{ asset('/img/broken.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Votre ordinateur ne démarre plus ? Vous rencontrez des problèmes de connexion
+                        Internet ? Des virus ont infecté votre système ? Chez ADEI, nous sommes là pour vous aider.
 
-Nous proposons également des formations sur mesure pour vous aider à maîtriser votre ordinateur et ses fonctionnalités. Que vous soyez débutant ou utilisateur avancé, nous pouvons adapter notre programme de formation à vos besoins spécifiques.
+                        Notre équipe de professionnels de l'informatique intervient rapidement pour diagnostiquer et
+                        résoudre tous vos problèmes informatiques. Que ce soit pour réparer un écran noir, installer un
+                        réseau Wi-Fi, supprimer des virus ou récupérer des données perdues, nous avons les compétences
+                        nécessaires pour résoudre tous vos problèmes.
 
-Enfin, nous proposons également la vente de matériel informatique et nous sommes spécialisés dans le recyclage de matériel pour protéger l'environnement.
+                        Nous proposons également des formations sur mesure pour vous aider à maîtriser votre ordinateur
+                        et ses fonctionnalités. Que vous soyez débutant ou utilisateur avancé, nous pouvons adapter
+                        notre programme de formation à vos besoins spécifiques.
 
-N'hésitez pas à faire appel à nous pour tous vos besoins en dépannage informatique, nous sommes là pour vous aider à résoudre tous vos problèmes informatiques.</p>
+                        Enfin, nous proposons également la vente de matériel informatique et nous sommes spécialisés
+                        dans le recyclage de matériel pour protéger l'environnement.
 
-    {{ form(form) }}
+                        N'hésitez pas à faire appel à nous pour tous vos besoins en dépannage informatique, nous sommes
+                        là pour vous aider à résoudre tous vos problèmes informatiques.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <form>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Nom) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Email) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Societe) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Telephone) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse_intervention) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Projet_pour_service) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.files) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Description) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Message) }}
+                    </div>
+                    <div class="col-auto">
+                        {{ form_widget(form.envoyer) }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
 {% endblock %}
