@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -15,9 +16,13 @@ class ContactType extends AbstractType
     {
         $builder
         //->add('nom_prenom',TextType::class)
-        ->add('votre_email',TextType::class)
+        ->add('votre_email',EmailType::class, [
+            'attr' => [
+                'class'=> 'form-control-lg']])
         //->add('description',TextareaType::class)
-        ->add('message',TextareaType::class)
+        ->add('message',TextareaType::class, [
+            'attr' => [
+                'class'=> 'form-control-lg']])
         ->add('envoyer',SubmitType::class)
         ;
     }

@@ -3,13 +3,72 @@
 {% block title %}Installation de materiel{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
-<h1>Installation de matériel</h1>
-<h2>Surveillez votre entreprise ou votre domicile en tout temps</h2>
-<img src="" alt="">
-<p>Vous avez acheté du nouveau matériel informatique pour votre entreprise ou pour votre usage personnel, mais vous ne savez pas comment l'installer ? Nous sommes là pour vous aider ! Nous pouvons installer tout type de matériel informatique, qu'il s'agisse d'un ordinateur, d'une imprimante, d'un scanner, d'un routeur, ou même de périphériques plus spécifiques tels que des serveurs ou des baies de stockage.
 
-Notre équipe de techniciens qualifiés peut intervenir chez vous pour installer et configurer votre matériel informatique. Nous nous assurons que tout fonctionne correctement avant de partir, afin que vous puissiez utiliser votre nouveau matériel en toute confiance. Nous pouvons également vous donner des conseils sur l'utilisation et l'entretien de votre matériel, afin de vous aider à en tirer le meilleur parti.</p>
+<div class="container">
+    <h1>Surveillez votre entreprise ou votre domicile en tout temps</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <img src="{{ asset('/img/broken.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Vous avez acheté du nouveau matériel informatique pour votre entreprise ou pour
+                        votre usage personnel, mais vous ne savez pas comment l'installer ? Nous sommes là pour vous
+                        aider ! Nous pouvons installer tout type de matériel informatique, qu'il s'agisse d'un
+                        ordinateur, d'une imprimante, d'un scanner, d'un routeur, ou même de périphériques plus
+                        spécifiques tels que des serveurs ou des baies de stockage.
 
-{{form(form)}}
+                        Notre équipe de techniciens qualifiés peut intervenir chez vous pour installer et configurer
+                        votre matériel informatique. Nous nous assurons que tout fonctionne correctement avant de
+                        partir, afin que vous puissiez utiliser votre nouveau matériel en toute confiance. Nous pouvons
+                        également vous donner des conseils sur l'utilisation et l'entretien de votre matériel, afin de
+                        vous aider à en tirer le meilleur parti.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <form>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Nom) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Email) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Societe) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Telephone) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse_intervention) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Projet_pour_service) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.files) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Description) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Message) }}
+                    </div>
+                    <div class="col-auto">
+                        {{ form_widget(form.envoyer) }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

@@ -3,13 +3,73 @@
 {% block title %}Reseaux et securite{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
-<h1>Réseaux et sécurité</h1>
-<h2>Protégez votre entreprise et vos données</h2>
-<img src="" alt="">
-<p>Notre entreprise ADEI vous propose des services complets pour les réseaux informatiques de votre entreprise. Nous assurons l'installation, la configuration, la gestion et la maintenance de vos réseaux informatiques. Nous proposons également un Pack Infogérance PME pour garantir la sécurité de votre système informatique et maintenir ses performances optimales.
 
-Une fois installé et configuré, votre réseau informatique permettra de partager de manière sécurisée vos ressources (fichiers, applications, périphériques...), facilitera la communication entre vos utilisateurs (messagerie interne ou externe, accès à distance au réseau) et favorisera le travail en groupe. Nous sommes à votre disposition pour toute demande d'information ou de devis pour la mise en place et la gestion de votre réseau informatique.</p>
+<div class="container">
+    <h1>Protégez votre entreprise et vos données</h1>
 
-{{ form(form) }}
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <img src="{{ asset('/img/broken.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Notre entreprise ADEI vous propose des services complets pour les réseaux
+                        informatiques de votre
+                        entreprise. Nous assurons l'installation, la configuration, la gestion et la maintenance de vos
+                        réseaux informatiques. Nous proposons également un Pack Infogérance PME pour garantir la
+                        sécurité de votre système informatique et maintenir ses performances optimales.
+
+                        Une fois installé et configuré, votre réseau informatique permettra de partager de manière
+                        sécurisée vos ressources (fichiers, applications, périphériques...), facilitera la communication
+                        entre vos utilisateurs (messagerie interne ou externe, accès à distance au réseau) et favorisera
+                        le travail en groupe. Nous sommes à votre disposition pour toute demande d'information ou de
+                        devis pour la mise en place et la gestion de votre réseau informatique.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <form>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Nom) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Email) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Societe) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Telephone) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse_intervention) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Projet_pour_service) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.files) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Description) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Message) }}
+                    </div>
+                    <div class="col-auto">
+                        {{ form_widget(form.envoyer) }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

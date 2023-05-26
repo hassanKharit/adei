@@ -1,8 +1,35 @@
-h5{
+h5{                                             /*laisser les h5 des cards ou non, voir SEO ou alors changer les tailles en boostrap*/
     font-size: 90%;
 }
 
-p{
+.card-text{
     font-size: 80%;
 }
+
+/************************************************
+                card
+************************************************/
+.anim:hover{                                              /*au survol de la souris, les éléments ayant la classe anim auront l'animation écrite en-dessous*/
+    animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+  @keyframes myAnim {
+      0% {
+          transform: scale(1);
+      }
+  
+      50% {
+          transform: scale(1.1);
+      }
+  
+      100% {
+          transform: scale(1);
+      }
+  }
+  
+  .anim a:hover{                /*au passage de la souris, les liens ayant la classe anim seront noires*/
+    color:black;
+  }
+  
+
+
 

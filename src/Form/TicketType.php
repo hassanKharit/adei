@@ -8,6 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -21,21 +22,21 @@ class TicketType extends AbstractType
         ->add('titre')
         ->add('Nom', TextType::class, [
             'attr' => [
-                'placeholder' => 'nom*',                     
-              'class'=> 'form-control-sm']
+                'placeholder' => 'nom',                     
+              'class'=> 'form-control']
             ])
-        ->add('Email', TextType::class, [
+        ->add('Email', EmailType::class, [
             'attr' => [
                 'placeholder' => 'email',
-                'class'=> 'form-control-sm']] )
+                'class'=> 'form-control']] )
         ->add('Societe', TextType::class, [
             'attr' => [
                 'placeholder' => 'société',
-                'class'=> 'form-control-sm']])
+                'class'=> 'form-control']])
         ->add('Telephone', NumberType::class, [
             'attr' => [
                 'placeholder' => 'téléphone',
-                'class'=> 'form-control-sm']])
+                'class'=> 'form-control']])
         ->add('Adresse', TextType::class, [
             'attr' => [
                 'placeholder' => 'adresse',
@@ -61,12 +62,11 @@ class TicketType extends AbstractType
         ->add('Description', TextareaType::class, [
             'attr' => [
                 'placeholder' => 'description',
-                'class'=> 'form-control-lg']])              //la class form-control permet d'ajuster des modifications
+                'class'=> 'form-control']])              //la class form-control permet d'ajuster des modifications
         ->add('Message', TextareaType::class, [
             'attr' => [
                 'placeholder' => 'message',
-                'class'=> 'form-control-lg',
-                'maxlength' => '8'
+                'class'=> 'form-control'
                 ]])              //griser le champ de droite à revoir
         ->add('files', FileType::class, [
             'attr' => [

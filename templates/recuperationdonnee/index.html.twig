@@ -3,12 +3,70 @@
 {% block title %}Recuperation de donnees{% endblock %}
 
 {% block body %}
+{% block paragraphe %}{% endblock %}
 {% block carrousel %}{% endblock %}
-<h1>Récupération de données</h1>
-<h2>Récupérez vos données importantes en cas de panne</h2>
-<img src="" alt="">
-<p>La perte de données est un cauchemar pour tout le monde. Mais avec ADEI, vous pouvez éviter ce problème en optant pour notre service de sauvegarde en ligne. Nous assurons une sauvegarde automatique et sécurisée de vos données critiques sur des serveurs distants, accessibles depuis n'importe quel endroit et à tout moment. De plus, en cas de perte de données, nous sommes en mesure de récupérer vos fichiers rapidement et efficacement. Ne prenez plus le risque de perdre des données importantes, faites confiance à ADEI pour vous fournir un service de sauvegarde en ligne fiable et sécurisé.</p>
 
-                {{ form(form) }}
-             
+
+<div class="container">
+    <h1>Récupérez vos données importantes en cas de panne</h1>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <img src="{{ asset('/img/broken.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">La perte de données est un cauchemar pour tout le monde. Mais avec ADEI, vous
+                        pouvez éviter ce problème en optant pour notre service de sauvegarde en ligne. Nous assurons une
+                        sauvegarde automatique et sécurisée de vos données critiques sur des serveurs distants,
+                        accessibles depuis n'importe quel endroit et à tout moment. De plus, en cas de perte de données,
+                        nous sommes en mesure de récupérer vos fichiers rapidement et efficacement. Ne prenez plus le
+                        risque de perdre des données importantes, faites confiance à ADEI pour vous fournir un service
+                        de sauvegarde en ligne fiable et sécurisé.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <form>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Nom) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.Email) }}
+                    </div>
+                    <div class="col-6">
+                        {{ form_widget(form.Societe) }}
+                    </div>
+                    <div class="col-6">
+                        {{ form_widget(form.Telephone) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Adresse_intervention) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Projet_pour_service) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.files) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Description) }}
+                    </div>
+                    <div class="col-12">
+                        {{ form_widget(form.Message) }}
+                    </div>
+                    <div class="col-auto">
+                        {{ form_widget(form.envoyer) }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
