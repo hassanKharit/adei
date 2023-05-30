@@ -15,6 +15,7 @@ class VenteController extends AbstractController
     public function index(Request $request,TemplateMailService $templateMailService): Response
     {   
 
+        
         $form = $this->createForm(TicketType::class);						
         $form->handleRequest($request);
          if ($form->isSubmitted() && $form->isValid()) {
