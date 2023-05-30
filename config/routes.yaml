@@ -1,3 +1,8 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+rechercher:
+  path: /rechercher
+  controller: App\Controller\RechercheController::rechercher
+
